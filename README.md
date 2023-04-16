@@ -1,5 +1,4 @@
 # WAVE
-Implementation of WAVE
 
 (By Ting Chen, [Fengnan Gao](https://gaofn.xyz/ "Fengnan's Homepage") and [Yan-Wen Tan](https://phys.fudan.edu.cn/f7/50/c7605a63312/page.htm "Yan-Wen's faculty page"))
 
