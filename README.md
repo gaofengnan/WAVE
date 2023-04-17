@@ -2,7 +2,7 @@
 
 (By Ting Chen, [Fengnan Gao](https://gaofn.xyz/ "Fengnan's Homepage") and [Yan-Wen Tan](https://phys.fudan.edu.cn/f7/50/c7605a63312/page.htm "Yan-Wen's faculty page"))
 
-Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **V**ariations in smFR**E**T) to detect and locate non-equilibrium transition positions in FRET trajectories, which is first introduced in Chen, Gao and Tan (2023).[^1]
+Implementation in Matlab of WAVE (**W**asserstein distance **A**nalysis in steady-state **V**ariations in smFR**E**T) to detect and locate non-equilibrium transition positions in FRET trajectories, which is first introduced in Chen, Gao and Tan (2023).[^1]
 
 ## Description of main functions
 
@@ -21,10 +21,10 @@ Run `TestNonequilibrium3` script in Matlab, and select a folder with structure a
 ***
 **Folder_name** (a folder containing all FRET trajectories)  
 
--->**XXX.txt** (records intensity-time trajectory, containing 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)  
-------**E** (a folder, contain FRET efficiency and region information of all trajectories in FRET folder)  
---------->**XXX.txt Efficiency.txt** (corresponding to XXX.txt, records FRET efficiency-time  trajectory in the first column, with the same length as intensity-time trajectory. In FRET region: [FRETbegin, FRETend], the recorded FRET efficiency~=0, while in crosstalk region [Crosstalkbegin, Crosstalkend] and background region [Backgroundbegin, Backgroundend], the recorded FRET efficiency=0)  
---------->**XXX.txt Region.txt** (corresponding to XXX.txt, records region boundaries. This file contains 6 elements, like follows [FRETbegin, FRETend, Crosstalkbegin, Crosstalkend, Backgroundbegin, Backgroundend])
+-->**XXX.txt** (records of intensity-time trajectory, containing 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)  
+------**E** (a folder containing FRET efficiency and region information of all trajectories in FRET folder)  
+--------->**XXX.txt Efficiency.txt** (corresponding to XXX.txt, and recording FRET efficiency-time trajectory in the first column, of the same length as intensity-time trajectory. In FRET region: ```[FRETbegin, FRETend]```, the recorded FRET efficiency```~=0```, while in crosstalk region ```[Crosstalkbegin, Crosstalkend]``` and background region ```[Backgroundbegin, Backgroundend]```, the recorded FRET efficiency```=0```)  
+--------->**XXX.txt Region.txt** (corresponding to XXX.txt, records region boundaries. This file contains 6 elements, like follows ```[FRETbegin, FRETend, Crosstalkbegin, Crosstalkend, Backgroundbegin, Backgroundend]```)
 ***
 
 We advise the user study the `test` folder for this specific structure of organizing data.
