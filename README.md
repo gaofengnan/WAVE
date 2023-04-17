@@ -61,7 +61,6 @@ You can refer to the **test** folder for this specific data structure.
 `HMM_FitTrace_Get_Distribution.m`, `HMM_MainSimple.m`, `HMM_Max_Likelihood.m`
 `Tcalculation.m`
 3. **MWD  analysis part:** `CountMatrixCalculation.m`, `FindMaximumWassersteinDistance3.m`
-`FindMaximumWassersteinDistanceHMMSequence.m`, `TcalculationC.m` 
-`FindMaximumWassersteinDistanceOutOrder.m`
+`FindMaximumWassersteinDistanceHMMSequence.m`, `TcalculationC.m`, `FindMaximumWassersteinDistanceOutOrder.m`
 4. **Forward/Backward algorithm part:** `FindBestTracePart2.m`, `MDLCompare.m`
 5. **Data simulation and evaluation part:** `MakeHMMPoissonData.m`, `postcalculationTimeBin.m`, `precalculationTimeBin.m`
