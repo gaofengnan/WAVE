@@ -47,7 +47,7 @@ test
 └── test3.txt
 ```
 
-**Note**: Set carefully the parameters in `TestNonequilibrium3` before running, especially `Changeframe`, which represents the time point at which the conditions change, depending on the experimental design.
+**Note**: Set carefully the parameters in `TestNonequilibrium3` before running, especially `Changeframe`, which is the time point at which the conditions change and depends on the experimental design.
 
 ### Test `TestNonequilibrium3` with simulated data
 
