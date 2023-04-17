@@ -29,7 +29,7 @@ Run `TestNonequilibrium3` script in Matlab, and select a folder with structure a
 --------->**XXX.txt Region.txt** (corresponding to XXX.txt, records region boundaries. This file contains 6 elements, like follows [FRETbegin, FRETend, Crosstalkbegin, Crosstalkend, Backgroundbegin, Backgroundend])
 ***
 
-We advise the user study the `test` folder for this specific structure for organizing the data.  
+We advise the user study the `test` folder for this specific structure of organizing data.
 
 **Note**: Set carefully the parameters in `TestNonequilibrium3` before running, especially `Changeframe`, which represents the time point at which the conditions change, depending on the experimental design.
 
