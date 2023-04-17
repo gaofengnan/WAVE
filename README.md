@@ -18,43 +18,48 @@ Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **
 
 ### 1. Run `TestNonequilibrium3` individually
 
-Run `TestNonequilibrium3` script in Matlab, and select a folder with the following format：
+Run `TestNonequilibrium3` script in Matlab, and select a folder with structure as follows:
 
-**Folder_name** (a folder, contain all FRET trajectories)  
+***
+**Folder_name** (a folder containing all FRET trajectories)  
 
--->**XXX.txt** (records intensity-time trajectory, contains 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)  
+-->**XXX.txt** (records intensity-time trajectory, containing 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)  
 ------**E** (a folder, contain FRET efficiency and region information of all trajectories in FRET folder)  
 --------->**XXX.txt Efficiency.txt** (corresponding to XXX.txt, records FRET efficiency-time  trajectory in the first column, with the same length as intensity-time trajectory. In FRET region: [FRETbegin, FRETend], the recorded FRET efficiency~=0, while in crosstalk region [Crosstalkbegin, Crosstalkend] and background region [Backgroundbegin, Backgroundend], the recorded FRET efficiency=0)  
 --------->**XXX.txt Region.txt** (corresponding to XXX.txt, records region boundaries. This file contains 6 elements, like follows [FRETbegin, FRETend, Crosstalkbegin, Crosstalkend, Backgroundbegin, Backgroundend])
 ***
-You can refer to the **test** folder for this specific data structure.  
-**Note**: Carefully set the parameters in `TestNonequilibrium3` before running, especially Changeframe, which represents the time point at which the conditions change, depending on the experimental design.
+
+You can refer to the `test` folder for this specific data structure.  
+
+**Note**: Set carefully the parameters in `TestNonequilibrium3` before running, especially `Changeframe`, which represents the time point at which the conditions change, depending on the experimental design.
 
 ### 2. Test `TestNonequilibrium3` with simulated data
 
-**First step:** Create an empty folder to save simulated data.  
-**Second Step:** Run `MakeNonequilibriumHMMPoissonData` and select the empty folder.  
-**Third Step:** Run `TestNonequilibrium3` and select the folder that contains simulated data.  
-**Forth Step:** Run `NonequilibriumCompare` to evaluate the analysis result.
+Follow the steps below:
 
-**Note**: The evaluation criteria in `NonequilibriumCompare` should match the kinetic rate coefficients set in `MakeNonequilibriumHMMPoissonData`. You can refer to the comments in these scripts for details.
+1. Create an empty folder `new_folder` to save simulated data.  
+2. Run `MakeNonequilibriumHMMPoissonData` with the newly created empty folder `new_folder`.  
+3. Run `TestNonequilibrium3` with the folder `new_folder` containing simulated data.  
+4. Run `NonequilibriumCompare` to evaluate the analysis result.
+
+**Note**: The evaluation criteria in `NonequilibriumCompare` should match the kinetic rate coefficients set in `MakeNonequilibriumHMMPoissonData`. Read the comments in these scripts for details.
 
 ## Additional information
 
-### 1. Output of `TestNonequilibrium3`
+### Output of `TestNonequilibrium3`
 
 **BNESTAnanysis** is the output of `TestNonequilibrium3`. It is a `cell` table, with the following format：
 
-- First row: record the name of each FRET trajectory (.txt file)
-- Second row: record the length of FRET trajectory after BNEST
-- Third row: record the last state before BNEST
-- Fourth row: record the first state after BNEST
-- Fifth row: record the trajectory length after condition change and before BNEST
-- Sixth row: record the Length of last segment before BNEST
-- Seventh row: record the FRET trajectory after BNEST
-- Eighth row: record the fitting trajectory after BNEST
+- 1st row: record the name of each FRET trajectory (.txt file)
+- 2nd row: record the length of FRET trajectory after BNEST
+- 3rd row: record the last state before BNEST
+- 4th row: record the first state after BNEST
+- 5th row: record the trajectory length after condition change and before BNEST
+- 6th row: record the Length of last segment before BNEST
+- 7th row: record the FRET trajectory after BNEST
+- 8th row: record the fitting trajectory after BNEST
 
-### 2. Function classification
+### Function classification
 
 1. **STaSI part:** `MDLMulit.m`, `StategroupingMulti.m`, `change_point_detection`.
 2. **HMM part:** `HMM_Algorithm2.m`, `HMM_Core.m`, `HMM_Data_Preparation.m`,
