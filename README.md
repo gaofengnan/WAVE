@@ -27,9 +27,9 @@ Run `TestNonequilibrium3` script in Matlab, and select a folder with the followi
 You can refer to the **test** folder for this specific data structure.  
 **Note**: Carefully set the parameters in `TestNonequilibrium3` before running, especially Changeframe, which represents the time point at which the conditions change, depending on the experimental design.
 ### 2.Test `TestNonequilibrium3` with simulated data
-**First step:** Create an empty folder to save simulated data.
-**Second Step:** Run `MakeNonequilibriumHMMPoissonData` and select the empty folder. 
-**Third Step:** Run `TestNonequilibrium3` and select the folder that contains simulated data.
+**First step:** Create an empty folder to save simulated data.  
+**Second Step:** Run `MakeNonequilibriumHMMPoissonData` and select the empty folder.  
+**Third Step:** Run `TestNonequilibrium3` and select the folder that contains simulated data.  
 **Forth Step:** Run `NonequilibriumCompare` to evaluate the analysis result.
 
 **Note**: The evaluation criteria in `NonequilibriumCompare` should match the kinetic rate coefficients set in `MakeNonequilibriumHMMPoissonData`. You can refer to the comments in these scripts for details.
