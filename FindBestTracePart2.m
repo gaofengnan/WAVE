@@ -137,8 +137,8 @@ for j=1:length(AfterLength) %we look for each original data trace and find best 
         if lengthstateafterunique<0.5 %if the proportion of data points that don't belong to the included states exceeds 50%, set MDLC=1 to stop the Forward/Backward algorithm
             MDLC=1;
         else
-            if ~isempty(yfitreplace)&&i>=4 %yfitreplace is set to prevent excessive computation, when many segments don't belong to the included states
-                stateaftersmall(end-sum(StateLength(len-i+4:len))+1:end)=yfitreplace(end-sum(StateLength(len-i+4:len))+1:end);
+            if ~isempty(yfitreplace)&&i>=10 %yfitreplace is set to prevent excessive computation, when many segments don't belong to the included states
+                stateaftersmall(end-sum(StateLength(len-i+10:len))+1:end)=yfitreplace(end-sum(StateLength(len-i+10:len))+1:end);
             end
             [MDLC,yfitother]=MDLCompare(yaftersmall,sd,stateaftersmall,IncludeState,FGratio); %construct a series of fitting trajectories by included states and compare them with original fitting trajectory
         end
