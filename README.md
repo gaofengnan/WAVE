@@ -4,11 +4,9 @@
 
 Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **V**ariations in smFR**E**T) to detect and locate non-equilibrium transition positions in FRET trajectories, which is first introduced in Chen, Gao and Tan (2023).[^1]
 
-[^1]: Chen, T., Gao, F. and Tan, Y-W. (2023) Transition Time Determination of Single-Molecule FRET Trajectories via Wasserstein Distance Analysis in Steady-state Variations in smFRET (WAVE).
+## Description of main functions
 
-## Main script description
-
-1. **`TestNonequilibrium3`**: Data analysis script, the core of WAVE.
+1. **`TestNonequilibrium3`**: The core of WAVE and the main function.
 
 2. **`MakeNonequilibriumHMMPoissonData`**: This script generates simulated data (FRET trajectories) via HMM.
 
@@ -16,7 +14,7 @@ Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **
 
 ## User guide
 
-### 1. Run `TestNonequilibrium3` individually
+### Run `TestNonequilibrium3` individually
 
 Run `TestNonequilibrium3` script in Matlab, and select a folder with structure as follows:
 
@@ -31,16 +29,34 @@ Run `TestNonequilibrium3` script in Matlab, and select a folder with structure a
 
 We advise the user study the `test` folder for this specific structure of organizing data.
 
+```text
+test
+├── BestHMMParameters2.mat
+├── BNESTAnanysis.mat
+├── DataSetInformation.mat
+├── E
+│   ├── test1.txt Efficiency.txt
+│   ├── test1.txt Region.txt
+│   ├── test2.txt Efficiency.txt
+│   ├── test2.txt Region.txt
+│   ├── test3.txt Efficiency.txt
+│   ├── test3.txt Region.txt
+|   └── test3.txt Region.txt
+├── test1.txt
+├── test2.txt
+└── test3.txt
+```
+
 **Note**: Set carefully the parameters in `TestNonequilibrium3` before running, especially `Changeframe`, which represents the time point at which the conditions change, depending on the experimental design.
 
-### 2. Test `TestNonequilibrium3` with simulated data
+### Test `TestNonequilibrium3` with simulated data
 
 Follow the steps below:
 
 1. Create an empty folder `new_folder` to save simulated data.  
 2. Run `MakeNonequilibriumHMMPoissonData` with the newly created empty folder `new_folder`.  
 3. Run `TestNonequilibrium3` with the folder `new_folder` containing simulated data.  
-4. Run `NonequilibriumCompare` to evaluate the analysis result.
+4. Evaluate the output with `NonequilibriumCompare`.
 
 **Note**: The evaluation criteria in `NonequilibriumCompare` should match the kinetic rate coefficients set in `MakeNonequilibriumHMMPoissonData`. Read the comments in these scripts for details.
 
@@ -48,7 +64,7 @@ Follow the steps below:
 
 ### Output of `TestNonequilibrium3`
 
-**BNESTAnanysis** is the output of `TestNonequilibrium3`. It is a `cell` table, with the following format：
+**BNESTAnanysis** is the output of `TestNonequilibrium3`. It is a `cell` table, with the following format
 
 - 1st row: record the name of each FRET trajectory (.txt file)
 - 2nd row: record the length of FRET trajectory after BNEST
@@ -65,7 +81,9 @@ Follow the steps below:
 2. **HMM part:** `HMM_Algorithm2.m`, `HMM_Core.m`, `HMM_Data_Preparation.m`,
 `HMM_FitTrace_Get_Distribution.m`, `HMM_MainSimple.m`, `HMM_Max_Likelihood.m`
 `Tcalculation.m`
-3. **MWD  analysis part:** `CountMatrixCalculation.m`, `FindMaximumWassersteinDistance3.m`
+3. **MWD analysis part:** `CountMatrixCalculation.m`, `FindMaximumWassersteinDistance3.m`
 `FindMaximumWassersteinDistanceHMMSequence.m`, `TcalculationC.m`, `FindMaximumWassersteinDistanceOutOrder.m`
 4. **Forward/Backward algorithm part:** `FindBestTracePart2.m`, `MDLCompare.m`
 5. **Data simulation and evaluation part:** `MakeHMMPoissonData.m`, `postcalculationTimeBin.m`, `precalculationTimeBin.m`
+
+[^1]: Chen, T., Gao, F. and Tan, Y-W. (2023) Transition Time Determination of Single-Molecule FRET Trajectories via Wasserstein Distance Analysis in Steady-state Variations in smFRET (WAVE)
