@@ -56,13 +56,13 @@ You can refer to the **test** folder for this specific data structure.
 
 ### 2. Function classification
 
-1. **STaSI part:**`MDLMulit.m`,	`StategroupingMulti.m`,`change_point_detection`.
-2. **HMM part:**`HMM_Algorithm2.m`,`HMM_Core.m`,`HMM_Data_Preparation.m`,
+1. **STaSI part:** `MDLMulit.m`, `StategroupingMulti.m`,`change_point_detection`.
+2. **HMM part:** `HMM_Algorithm2.m`,`HMM_Core.m`,`HMM_Data_Preparation.m`,
 `HMM_FitTrace_Get_Distribution.m`,`HMM_MainSimple.m`,`HMM_Max_Likelihood.m`
 `Tcalculation.m`
-3. **MWD  analysis part:**`CountMatrixCalculation.m`,`FindMaximumWassersteinDistance3.m`
+3. **MWD  analysis part:** `CountMatrixCalculation.m`,`FindMaximumWassersteinDistance3.m`
 `FindMaximumWassersteinDistanceHMMSequence.m`,`TcalculationC.m`
 `FindMaximumWassersteinDistanceOutOrder.m`
-4. **Forward/Backward algorithm part:**`FindBestTracePart2.m`,`MDLCompare.m`
-5. **Data simulation and evaluation part:**`MakeHMMPoissonData.m`,`postcalculationTimeBin.m`
+4. **Forward/Backward algorithm part:** `FindBestTracePart2.m`,`MDLCompare.m`
+5. **Data simulation and evaluation part:** `MakeHMMPoissonData.m`,`postcalculationTimeBin.m`
 `precalculationTimeBin.m`
