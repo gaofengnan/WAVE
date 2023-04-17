@@ -16,7 +16,7 @@ Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **
 
 ## User guide
 
-### 1.Run `TestNonequilibrium3` individually
+### 1. Run `TestNonequilibrium3` individually
 
 Run `TestNonequilibrium3` script in Matlab, and select a folder with the following format：
 ***
@@ -30,7 +30,7 @@ Run `TestNonequilibrium3` script in Matlab, and select a folder with the followi
 You can refer to the **test** folder for this specific data structure.  
 **Note**: Carefully set the parameters in `TestNonequilibrium3` before running, especially Changeframe, which represents the time point at which the conditions change, depending on the experimental design.
 
-### 2.Test `TestNonequilibrium3` with simulated data
+### 2. Test `TestNonequilibrium3` with simulated data
 
 **First step:** Create an empty folder to save simulated data.  
 **Second Step:** Run `MakeNonequilibriumHMMPoissonData` and select the empty folder.  
@@ -41,7 +41,7 @@ You can refer to the **test** folder for this specific data structure.
 
 ## Additional information
 
-### 1.Output of `TestNonequilibrium3`
+### 1. Output of `TestNonequilibrium3`
 
 **BNESTAnanysis** is the output of `TestNonequilibrium3`. It is a cell table, with the following format：
 
@@ -54,7 +54,7 @@ You can refer to the **test** folder for this specific data structure.
 - Seventh row: record the FRET trajectory after BNEST
 - Eighth row: record the fitting trajectory after BNEST
 
-### 2.Function classification
+### 2. Function classification
 
 1. **STaSI part:**`MDLMulit.m`,	`StategroupingMulti.m`,`change_point_detection`.
 2. **HMM part:**`HMM_Algorithm2.m`,`HMM_Core.m`,`HMM_Data_Preparation.m`,
