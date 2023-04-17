@@ -66,16 +66,16 @@ Follow the steps below:
 
 **BNESTAnanysis** is the output of `TestNonequilibrium3`. It is a `cell` table, with the following format
 
-- 1st row: record the name of each FRET trajectory (.txt file)
-- 2nd row: record the length of FRET trajectory after BNEST
-- 3rd row: record the last state before BNEST
-- 4th row: record the first state after BNEST
-- 5th row: record the trajectory length after condition change and before BNEST
-- 6th row: record the Length of last segment before BNEST
-- 7th row: record the FRET trajectory after BNEST
-- 8th row: record the fitting trajectory after BNEST
+- 1st row: the name of each FRET trajectory (.txt file)
+- 2nd row: the length of FRET trajectory after BNEST
+- 3rd row: the last state before BNEST
+- 4th row: the first state after BNEST
+- 5th row: the trajectory length after condition change and before BNEST
+- 6th row: the Length of last segment before BNEST
+- 7th row: the FRET trajectory after BNEST
+- 8th row: the fitting trajectory after BNEST
 
-### Function classification
+### Categories of provided functions
 
 1. **STaSI part:** `MDLMulit.m`, `StategroupingMulti.m`, `change_point_detection`.
 2. **HMM part:** `HMM_Algorithm2.m`, `HMM_Core.m`, `HMM_Data_Preparation.m`,
