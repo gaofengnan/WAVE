@@ -18,13 +18,13 @@ Implementation of WAVE (**W**asserstein distance **A**nalysis in steady-state **
 ### 1.Run `TestNonequilibrium3` individually
 Run `TestNonequilibrium3` script in Matlab, and select a folder with the following format：
 ***
-****Folder_name**** (a folder, contain all FRET trajectories)
--->**XXX.txt** (records intensity-time trajectory, contains 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)
-------****E**** (a folder, contain FRET efficiency and region information of all trajectories in FRET folder)
- --------->**XXX.txt Efficiency.txt** (corresponding to XXX.txt, records FRET efficiency-time  trajectory in the first column, with the same length as intensity-time trajectory. In FRET region: [FRETbegin, FRETend], the recorded FRET efficiency~=0, while in crosstalk region [Crosstalkbegin, Crosstalkend] and background region [Backgroundbegin, Backgroundend], the recorded FRET efficiency=0)
+****Folder_name**** (a folder, contain all FRET trajectories)  
+-->**XXX.txt** (records intensity-time trajectory, contains 2 columns data with same length. The first column is the intensity-time trajectory of donor channel, and the second column is the intensity-time trajectory of acceptor channel)  
+------****E**** (a folder, contain FRET efficiency and region information of all trajectories in FRET folder)  
+--------->**XXX.txt Efficiency.txt** (corresponding to XXX.txt, records FRET efficiency-time  trajectory in the first column, with the same length as intensity-time trajectory. In FRET region: [FRETbegin, FRETend], the recorded FRET efficiency~=0, while in crosstalk region [Crosstalkbegin, Crosstalkend] and background region [Backgroundbegin, Backgroundend], the recorded FRET efficiency=0)  
 --------->**XXX.txt Region.txt** (corresponding to XXX.txt, records region boundaries. This file contains 6 elements, like follows [FRETbegin, FRETend, Crosstalkbegin, Crosstalkend, Backgroundbegin, Backgroundend])
 ***
-You can refer to the **test** folder for this specific data structure.
+You can refer to the **test** folder for this specific data structure.  
 **Note**: Carefully set the parameters in `TestNonequilibrium3` before running, especially Changeframe, which represents the time point at which the conditions change, depending on the experimental design.
 ### 2.Test `TestNonequilibrium3` with simulated data
 **First step:** Create an empty folder to save simulated data.
