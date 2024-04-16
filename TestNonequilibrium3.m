@@ -574,6 +574,7 @@ if length(AfterLengthResult)==txt_num
 %         plot(1:TraceLength(1),y(1:TraceLength(1)),'r','LineWidth',1)
 %         hold on;
 %         plot(1:TraceLength(1),yfit(1:TraceLength(1)),'b','LineWidth',1.5)
+%         xlabel('Frame');ylabel('FRET Efficiency');
         if AfterLengthResult(1)~=0
             StateBefore(1)=yfit(TraceLength(1)-AfterLengthResult(1));
             StateAfter(1)=yfit(TraceLength(1)-AfterLengthResult(1)+1);
@@ -617,6 +618,7 @@ if length(AfterLengthResult)==txt_num
 %             plot(1:TraceLength(j),y(frame1:frame2),'r','LineWidth',1)
 %             hold on;
 %             plot(1:TraceLength(j),yfit(frame1:frame2),'b','LineWidth',1.5)
+%             xlabel('Frame');ylabel('FRET Efficiency');
             if AfterLengthResult(j)~=0
                 StateBefore(j)=yfit(frame3-1);
                 StateAfter(j)=yfit(frame3);
